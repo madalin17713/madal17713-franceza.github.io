@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #0055A4 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #EF4135 66.66%);
+    background-size: 300% 100%;
+    animation: moveFlag 5s linear infinite;
+    display: flex;
+    flex-direction: column; /* Permite aranjarea verticală */
+    align-items: center; /* Centrează pe orizontală */
+    height: 100vh; /* Înălțimea completă a ferestrei */
+    margin: 0; /* Elimină marginile implicite */
+    padding-top: 50px; /* Adaugă un padding pentru a ridica textul mai sus */
+    overflow-x: hidden; /* Ascunde scroll-ul lateral */
+}
+
+@keyframes moveFlag {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+header {
+    text-align: center; /* Centrează textul în header */
+    margin-bottom: 30px;
+    opacity: 0; /* Ascuns la început */
+    animation: fadeIn 1s forwards; /* Animația de apariție */
+    font-family: 'Great Vibes', cursive; /* Font elegant scris de mână */
+    font-size: 4rem; /* Dimensiunea fontului mărită (ex: 4rem) */
+    font-weight: bold; /* Text bolt */
+    color: #333; /* Culoare elegantă */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Vizibil */
+        transform: translateY(0); /* Poziția normală */
+    }
+}
+
+.sentence {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centrează cuvintele pe orizontală */
+    flex-wrap: wrap; /* Permite cuvintelor să se încadreze pe mai multe linii */
+    font-size: 4rem; /* Dimensiunea fontului pentru cuvinte (ex: 4rem) */
+}
+
+.word {
+    opacity: 1; /* Face cuvintele vizibile imediat */
+    transform: translateY(0); /* Poziția normală */
+    font-weight: bold; /* Text bolt */
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Permite aranjarea verticală */
+    align-items: center; /* Centrează pe orizontală */
+    margin-top: 20px; /* Spațiu între header și container */
+}
+
+.text-section {
+    display: flex;
+    flex-direction: column; /* Permite aranjarea verticală */
+    justify-content: center; /* Centrează vertical textul */
+    align-items: center; /* Centrează pe orizontală */
+    opacity: 0; /* Ascuns la început */
+    animation: fadeIn 1s forwards; /* Animația de apariție */
+    margin-top: 30px; /* Spațiu între text și video */
+    font-family: 'Great Vibes', cursive; /* Font elegant scris de mână */
+    font-size: 2.5rem; /* Dimensiunea fontului pentru text */
+    color: #333; /* Culoare text */
+}
+
+.video-container {
+    margin-top: 30px; /* Spațiu între text și video */
+    opacity: 0; /* Ascuns la început */
+    animation: fadeIn 1s forwards; /* Animația de apariție */
+    width: 100%; /* Asigură-te că containerul video se încadrează în lățime */
+    max-width: 800px; /* Lățimea maximă a video-ului */
+}
+
+.video {
+    border: 5px solid #333; /* Contur pentru video */
+    border-radius: 10px; /* Colțuri rotunjite */
+    width: 100%; /* Lățimea video-ului */
+    height: auto; /* Înălțimea automată pentru a menține proporțiile */
+}
