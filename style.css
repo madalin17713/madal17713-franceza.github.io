@@ -48,9 +48,10 @@ header {
 }
 
 .word {
-    opacity: 1; /* Face cuvintele vizibile imediat */
-    transform: translateY(0); /* Poziția normală */
+    opacity: 0; /* Face cuvintele vizibile imediat */
+    transform: translateY(-50px); /* Poziția normală */
     font-weight: bold; /* Text bolt */
+    animation: fallDown 1s forwards; /* Animația de apariție */
 }
 
 .container {
@@ -86,4 +87,11 @@ header {
     border-radius: 10px; /* Colțuri rotunjite */
     width: 100%; /* Lățimea video-ului */
     height: auto; /* Înălțimea automată pentru a menține proporțiile */
+}
+
+@keyframes fallDown{
+    to {
+        opacity: 1; /* Face cuvintele vizibile */
+        transform: translateY(0); /* Poziția finală */
+    }
 }

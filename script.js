@@ -2,14 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const words = document.querySelectorAll('.word');
     
     words.forEach((word, index) => {
-        word.style.animationDelay = `${index * 0.2}s`;
+        word.style.animationDelay = `${index * 0.2}s`; // Întârziere pentru fiecare cuvânt
+        word.classList.add('fallDown'); // Adaugă clasa de animație
     });
-
-    
-
-    function showVideo() {
-        const videoContainer = document.querySelector('.video-container');
-        videoContainer.style.opacity = 1; // Fă videoclipul vizibil
-        videoContainer.style.animation = 'fadeIn 1s forwards'; // Aplică animația de apariție
-    }
 });
